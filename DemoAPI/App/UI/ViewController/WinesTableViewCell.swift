@@ -16,6 +16,14 @@ class WinesTableViewCell: UITableViewCell {
     var wine: Wine? {
         didSet {
             self.lbName.text = wine?.name
+            switch wine?.snoothrank {
+            case .double(let value):
+                print(value)
+            case .string(let value):
+                print(value)
+            case .none:
+                print("Missing type")
+            }
         }
     }
     

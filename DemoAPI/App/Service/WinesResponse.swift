@@ -8,6 +8,28 @@
 
 import UIKit
 
+enum snoothRankValue: Decodable {
+
+    case double(Double), string(String)
+
+    init(from decoder: Decoder) throws {
+        if let double = try? decoder.singleValueContainer().decode(Double.self) {
+            self = .double(double)
+            return
+        }
+
+        if let string = try? decoder.singleValueContainer().decode(String.self) {
+            self = .string(string)
+            return
+        }
+
+        throw SnoothRankError.missingValue
+    }
+
+    enum SnoothRankError: Error {
+        case missingValue
+    }
+}
 struct Wine: Decodable {
     var name: String?
     var code: String?
@@ -26,6 +48,7 @@ struct Wine: Decodable {
     var num_reviews: Int?
     var imageData: Data?
     var averageRating: Double?
+    var snoothrank: snoothRankValue?
 }
 
 struct Meta: Decodable {
