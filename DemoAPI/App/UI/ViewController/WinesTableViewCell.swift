@@ -15,7 +15,7 @@ class WinesTableViewCell: UITableViewCell {
     
     var wine: Wine? {
         didSet {
-            
+            self.lbName.text = wine?.name
         }
     }
     

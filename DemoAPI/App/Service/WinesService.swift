@@ -9,18 +9,20 @@
 import UIKit
 
 final class WinesService: BaseService {
-    func getWines(keyword: String, completion: @escaping ([Wine]?, Error?) -> ())
+    func getWines(keyword: String, f: UInt, n: UInt, completion: @escaping (WinesResponse?, Error?) -> ())
         -> URLSessionDataTask? {
             let queryParams = [
-                "key": "{{key}}",
-                "ip": "192.168.1.1",
+                "akey": "jp262sm0yq2a4eafiz26crz0j9tvdvafydzdvwzi6f3lngdq",
+                "ip": "66.28.234.115",
                 "q": keyword,
+                "n": String(n),
+                "f": String(f)
             ]
-            return self.client.load(path: "/wines", method: "GET", queryParams: queryParams, httpBody: nil) { (data, error) in
+            return self.client.load(path: "/wines/", method: "GET", queryParams: queryParams, httpBody: nil) { (data, error) in
                 if let data = data, error == nil {
                     let decoder = JSONDecoder()
                     let response = try! decoder.decode(WinesResponse?.self, from: data)
-                    completion(response?.wines, nil)
+                    completion(response, nil)
                 } else {
                     completion(nil, error)
                 }

@@ -18,6 +18,7 @@
 		000032E7237EDAB700BCE1DF /* WinesRESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000032E6237EDAB700BCE1DF /* WinesRESTClient.swift */; };
 		000032E9237EDE5500BCE1DF /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000032E8237EDE5500BCE1DF /* BaseService.swift */; };
 		000032EB237EDFD100BCE1DF /* WinesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000032EA237EDFD100BCE1DF /* WinesResponse.swift */; };
+		00E79B4123828FB0005728B3 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E79B4023828FB0005728B3 /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		000032E6237EDAB700BCE1DF /* WinesRESTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinesRESTClient.swift; sourceTree = "<group>"; };
 		000032E8237EDE5500BCE1DF /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		000032EA237EDFD100BCE1DF /* WinesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinesResponse.swift; sourceTree = "<group>"; };
+		00E79B4023828FB0005728B3 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				000032E6237EDAB700BCE1DF /* WinesRESTClient.swift */,
 				000032E8237EDE5500BCE1DF /* BaseService.swift */,
 				000032EA237EDFD100BCE1DF /* WinesResponse.swift */,
+				00E79B4023828FB0005728B3 /* ImageService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				000032D8237ED5A500BCE1DF /* WinesTableViewCell.swift in Sources */,
+				00E79B4123828FB0005728B3 /* ImageService.swift in Sources */,
 				000032CD237ED45E00BCE1DF /* AppDelegate.swift in Sources */,
 				000032EB237EDFD100BCE1DF /* WinesResponse.swift in Sources */,
 				000032D4237ED57200BCE1DF /* WinesViewController.swift in Sources */,
